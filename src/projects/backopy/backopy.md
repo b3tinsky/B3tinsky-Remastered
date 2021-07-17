@@ -35,8 +35,10 @@ Logs in to an instagram account and gets a list of the users this account is fol
 Uses previous 2 scripts and starts unfollowing users who are not in both lists (users who you follow but don't follow you back). This script is great for promotion in an instagram account, since you can follow large quantities of users, then only unfollow the ones who didn't follow back, keeping your account's follower ration clean.
 This script has a timer and a limit to avoid instagram classifying it as a bot. It waits a random amount of seconds (6 - 15 if unfollow is successful, 30 - 300 if something went south). After it reaches the limit the program stops.
 
+[Github Repo](https://github.com/betorendon/Instagram-Utilities)
+
 ### Next Features
-1. Meme Scraper: Download memes from given sources (Twitter, Instagram, Reddit)
+1. ~~Meme Scraper: Download memes from given sources (Twitter, Instagram, Reddit)~~
 2. Resize & Upload Videos
 3. Run the scripts from the cloud (AWS)
 4. Data collecting (likes, times of day, types of memes, etc.)
