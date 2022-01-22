@@ -43,10 +43,12 @@ const AboutPage = () => {
     <Layout>
       <Head title="About" />
       <br />
+      <Link to="/horrorfilms">
+        <h3 className={AboutStyles.showMeTheRiddle}>
+          <span role="img" aria-label="knife">🔪</span>
+        </h3>
+      </Link>
       <br />
-      <br />
-      <br />
-
       {data.allFile.edges.map(({ node }, index) => (
         <Img
           key={index}
@@ -106,23 +108,8 @@ const AboutPage = () => {
         a photography session, contact me ;)
       </p>
 
-      {/* <Link to="/certifications">
-        <h3>
-          <span role="img" aria-label="scroll">
-            📜
-          </span>{" "}
-          Certifications
-        </h3>
-      </Link>
-      <p>
-        A humble wall to show off my{" "}
-        <Link to="/certifications" style={{ color: "orange" }}>
-          trophies
-        </Link>{" "}
-        ;D
-      </p> */}
-
-      <Link to="/horrorfilms">
+      {/* Search here for scary movies >:) */}
+      {/* <Link to="/horrorfilms">
         <h3 className={AboutStyles.showMeTheRiddle}>
           <span role="img" aria-label="knife">
             🔪
@@ -132,7 +119,7 @@ const AboutPage = () => {
             🔪
           </span>
         </h3>
-      </Link>
+      </Link> */}
 
       <h3>
         <span role="img" aria-label="phone">📞 </span> Contact Me
