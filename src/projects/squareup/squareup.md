@@ -1,9 +1,8 @@
 ---
 title: "SquareUp"
-date: "2020-12-10"
 tags: ["Unity", "CSharp"]
 cover: "./squareup-banner.png"
-description: "Melee combat game made with Unity & C#"
+description: "Melee combat game made with a rock, paper, scissors mechanic"
 ---
 ![Banner](./squareup-banner.png)
 SquareUp is a game I made for the "Videogame development project" class. It was inspired by Super Smash Bros (even though I've never played it) and it has a "rock, paper, scissors" concept. You play as a figure (square, triangle, etc.) and each figure has an advantage (or disadvantage) against other specific figures.

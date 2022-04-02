@@ -49,26 +49,22 @@ const ProjectsPage = () => {
       <Navbar />
       <Head title="Projects" />
       <div className={projectsStyles.container}>
-        <ol className={projectsStyles.posts}>
+        
           <h1 className={projectsStyles.title}>Projects</h1>
           <hr />
           <section className={projectsStyles.projectgrid}>
             {data.allMarkdownRemark.edges.map((edge, index) => {
               return (
-                <li key={index} className={projectsStyles.post}>
+                <div key={index} className={projectsStyles.post}>
                   <Link to={`/projects/${edge.node.fields.slug}`}>
-                    <h1 style={{ textAlign: "center" }}>
-                      {edge.node.frontmatter.title}
-                    </h1>
-
+                    <h1 style={{ textAlign: "center" }}>{edge.node.frontmatter.title}</h1>
                     <Img
                       fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
                       alt={edge.node.frontmatter.title}
                     />
                     <p>{edge.node.frontmatter.description}</p>
-                    {/* <p>
-                  {edge.node.frontmatter.date}{" "}
-                  {edge.node.frontmatter.tags
+                    <p>
+                    {edge.node.frontmatter.tags
                     ? edge.node.frontmatter.tags.map((tag, i) => {
                         return (
                           <span key={i} className={`tagPill-${tag}`}>
@@ -79,13 +75,13 @@ const ProjectsPage = () => {
                         )
                       })
                     : null}
-                </p> */}
+                    </p>
                   </Link>
-                </li>
+                </div>
               )
             })}
           </section>
-        </ol>
+        
       </div>
     </div>
   )
