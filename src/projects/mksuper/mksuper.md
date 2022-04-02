@@ -1,5 +1,6 @@
 ---
 title: "MK Super"
+date: "2021-06-10"
 tags: ["Python"]
 cover: "./Mksuper.png"
 description: "Flashes subliminal messages of your choice"

@@ -1,5 +1,6 @@
 ---
 title: "Backopy"
+date: "2022-03-22"
 tags: ["Python"]
 cover: "./Backopy_Cover.jpg"
 description: "Automated Meme Page"

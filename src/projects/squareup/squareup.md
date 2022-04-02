@@ -1,5 +1,6 @@
 ---
 title: "SquareUp"
+date: "2020-12-10"  
 tags: ["Unity", "CSharp"]
 cover: "./squareup-banner.png"
 description: "Melee combat game made with a rock, paper, scissors mechanic"

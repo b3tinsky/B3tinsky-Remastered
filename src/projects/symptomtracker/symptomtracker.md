@@ -1,5 +1,6 @@
 ---
 title: "Symptom Monitor"
+date: "2021-11-10"
 tags: ["Kotlin", "Android", "Firebase"]
 cover: "./pixelHospital.jpg"
 description: "Android app to monitor covid symptoms"
