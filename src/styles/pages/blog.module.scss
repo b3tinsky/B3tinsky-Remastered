@@ -56,9 +56,15 @@ $Javascript: rgb(255, 230, 8), black, bolder, normal;
 $React: rgb(82, 186, 255), white, bolder, normal;
 $Python: #3776ab, #ffd343, bolder, normal;
 $Design: rgb(255, 144, 255), white, bolder, normal;
+$Kotlin: rgb(192, 57, 255), rgb(0, 0, 0), bolder, normal;
+$WebGL: rgb(255, 255, 255), rgb(136, 0, 0), bolder, normal;
+$Firebase: rgb(255, 163, 57), rgb(0, 0, 0), bolder, normal;
 $CS: rgb(2, 241, 14), rgb(0, 0, 0) , bolder, normal;
+$Android: rgb(255, 255, 255), rgb(111, 228, 95) , bolder, normal;
+$CSharp: rgb(121, 57, 163), rgb(255, 255, 255), bolder, normal;
 $Linux: rgb(0, 0, 0), rgb(255, 255, 255), bolder, normal;
 $Bash: rgb(189, 189, 189), rgb(255, 255, 255), bolder, normal;
+$Unity: rgb(58, 58, 58), rgb(255, 255, 255), bolder, normal;
 $Physics: rgb(255,255,255), rgb(0,0,0), bolder, normal;
 $Life: rgb(255, 150, 30), rgb(0,0,0), bolder, normal;
 
@@ -66,9 +72,15 @@ $Life: rgb(255, 150, 30), rgb(0,0,0), bolder, normal;
 [class*="React"]     {@include tag($React...);}
 [class*="Python"]    {@include tag($Python...);}
 [class*="Design"]    {@include tag($Design...);}
+[class*="Kotlin"]    {@include tag($Kotlin...);}
+[class*="WebGL"]    {@include tag($WebGL...);}
+[class*="Firebase"]    {@include tag($Firebase...);}
 [class*="CS"]    {@include tag($CS...);}
+[class*="Android"]    {@include tag($Android...);}
+[class*="CSharp"]    {@include tag($CSharp...);}
 [class*="Linux"]    {@include tag($Linux...);}
 [class*="Bash"]    {@include tag($Bash...);}
+[class*="Unity"]    {@include tag($Unity...);}
 [class*="Physics"]    {@include tag($Physics...);}
 [class*="Life"]    {@include tag($Life...);}
 
