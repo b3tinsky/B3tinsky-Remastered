@@ -53,6 +53,9 @@ const phrasesFile = [
 "God is a comedian playing to an audience too afraid to laugh - <b>Voltaire</b>",
 "Perhaps the most valuable result of all education is the ability to make yourself do the thing you have to do, when it ought to be done, whether you like it or not - <b>Thomas Henry Huxley</b>",
 "Success is liking yourself, liking what you do, and liking how you do it - <b>Maya Angelou</b>",
+"It's not a 9-5 job. It's an every moment you're awake job because you actually enjoy the work that you're doing. - <b>Jeffrey Kalmikoff</b>",
+"There are two tragedies in life. One is not to get your heart's desire. The other is to get it. - <b>George Bernard Shaw</b>",
+"He who hesitates is a damned fool. - <b>Mae West</b>",
 
 ];
 export default phrasesFile;
