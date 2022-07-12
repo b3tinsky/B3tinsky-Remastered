@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
 
-import projectsStyles from "../styles/pages/projects.module.scss"
+import * as projectsStyles from "../styles/pages/projects.module.scss"
 
 const ProjectsPage = () => {
   const data = useStaticQuery(graphql`

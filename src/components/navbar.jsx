@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import navStyles from "../styles/components/navbar.module.scss";
+import * as navStyles from "../styles/components/navbar.module.scss";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class Navbar extends Component {

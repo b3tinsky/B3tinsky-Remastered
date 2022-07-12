@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
-import booksStyles from "../styles/pages/books.module.scss"
+import * as booksStyles from "../styles/pages/books.module.scss"
 import Img from "gatsby-image"
 
 const BooksPage = () => {

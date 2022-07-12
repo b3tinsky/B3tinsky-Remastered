@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@mixin grading($border-width, $border-color, $border-style) {
+    &:hover {
+        border-width: $border-width;
+        border-color: $border-color;
+        border-style: $border-style;
+        transition: 0s;
+    }
+}
+
 
 .content {
     width: 100%;
@@ -14,7 +23,7 @@
     column-gap: 5px;
 }
 
-.photogrid img {
+.photogrid .img {
     width: 100% !important;
     height: 100% !important;
 }
@@ -32,19 +41,31 @@
 
 .box .imgBox {
     position: relative;
-
 }
 
-.box .imgBox img {
+.box .imgBox .img {
     transition: .5s;
 }
 
-.box:hover .imgBox img {
+.box:hover .imgBox .img {
     opacity: 0.5;
+    // border-width: 5px;
+    // border-color: red;
+    // border-style: solid;
     //  transform: translateY(-10px); 
 }
 
+$NUL: 5px, rgb(66, 66, 66), solid;
+$LEG: 5px, rgb(119, 0, 255), solid;
+$GUD: 5px, rgb(45, 216, 39), solid;
+$MEH: 5px, rgb(231, 209, 14), solid;
+$BAD: 5px, rgb(238, 45, 45), solid;
 
+[class*="box_grading_NUL"]    {@include grading($NUL...);}
+[class*="box_grading_LEG"]    {@include grading($LEG...);}
+[class*="box_grading_GUD"]    {@include grading($GUD...);}
+[class*="box_grading_MEH"]    {@include grading($MEH...);}
+[class*="box_grading_BAD"]    {@include grading($BAD...);}
 
 .box .content {
     position: absolute;

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './navbar'
 import '../styles/index.scss'
-import layoutStyles from '../styles/components/layout.module.scss'
+import * as layoutStyles from '../styles/components/layout.module.scss'
 
 const Layout = (props) => {
     return (

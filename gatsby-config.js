@@ -64,6 +64,7 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    `gatsby-plugin-image`,
   ],
 }

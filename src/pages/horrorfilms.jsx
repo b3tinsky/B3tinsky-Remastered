@@ -1,10 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
+
 import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Head from "../components/head"
 import Navbar from "../components/navbar"
-import horrorStyles from "../styles/pages/horrorfilms.module.scss"
+import * as horrorStyles from "../styles/pages/horrorfilms.module.scss"
+import GradingModal from "../components/horrorfilms/GradingModal"
 
 const HorrorFilmsPage = () => {
+  const [modalShow, setModalShow] = useState(true);
   const data = useStaticQuery(graphql`
     query {
       allFile(
@@ -19,14 +23,7 @@ const HorrorFilmsPage = () => {
             name
             relativeDirectory
             childImageSharp {
-              fluid {
-                originalImg
-                base64
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
+              gatsbyImageData(layout: CONSTRAINED)
             }
           }
         }
@@ -39,17 +36,19 @@ const HorrorFilmsPage = () => {
       <Head title="Horror Films" />
       <section className={horrorStyles.photogrid}>
         {data.allFile.edges.map(({ node }, index) => (
-          <div className={horrorStyles.box} key={index}>
+          
+          <div className={`${horrorStyles.box} ${`horrorStyles.box_grading_${node.name.match(/\[[A-Z]{3}\]/) ? node.name.match(/\[[A-Z]{3}\]/)[0].substr(1,3) : "NUL"}`}`} key={index}>
+            {/* {
+              console.log( node.name.match(/\[[A-Z]{3}\]/) ? node.name.match(/\[[A-Z]{3}\]/)[0].substr(1,3) : node.name )
+            } */}
             <div className={horrorStyles.imgBox}>
-              <img src={node.childImageSharp.fluid.originalImg} alt={node.name}></img>
+              <GatsbyImage image={node.childImageSharp.gatsbyImageData} className={horrorStyles.img} alt={node.name}></GatsbyImage>
               <div className={horrorStyles.content}>
-                <h3>{node.name.slice(0, node.name.length-7)}</h3>
+                <h3>{node.name.slice(0, node.name.length-12)}</h3>
                 <a
                   href={`https://www.google.com/search?q=intext%3A${node.name}`}
                   className={
-                    (horrorStyles.btn,
-                    horrorStyles.btnDefault,
-                    horrorStyles.btnD)
+                    horrorStyles.btnD
                   }
                   target="_blank"
                   rel="noreferrer"
@@ -74,6 +73,7 @@ const HorrorFilmsPage = () => {
         <br />
         <br />
       </section>
+        <GradingModal show={modalShow} onHide={() => setModalShow(false)}/>
     </div>
   )
 }

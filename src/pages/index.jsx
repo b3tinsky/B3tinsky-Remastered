@@ -8,6 +8,7 @@ import Typewriter from "typewriter-effect"
 import { random } from "lodash"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 
+
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -153,6 +154,7 @@ const IndexPage = () => {
           })}
         </div>
       </Layout>
+    
     </div>
   )
 }
