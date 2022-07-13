@@ -85,7 +85,14 @@ a {
 }
 
 .typeWriterDiv {
-    padding: 50% 20%;
+    // padding: 50% 20%;
+    // left: 50%;
+    // top: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10%; // Balances the 10% margin from the layout component
 }
 
 #homeBackground {
@@ -98,13 +105,18 @@ a {
 
 @media (max-width: 1200px) {
     #homeBackground {
-        background: url('16.jpg')  ;
+        // background: url('16.jpg')  ;
+        background: #262626;
         width: 100%;
         // height: 100vh;
         background-size: cover;
     }
     .typeWriterDiv {
-        padding: 100% 5% 150%;
+        // padding: 100% 5% 150%;
+        left: 50%;
+        top: 50%;
+        // transform: translate(-50%, -50%);
+
     }
 }
 
