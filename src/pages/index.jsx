@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import phrasesFile from "../phrases.js"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Typewriter from "typewriter-effect"
 import { random } from "lodash"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
@@ -44,14 +44,7 @@ const IndexPage = () => {
               tags
               cover {
                 childImageSharp {
-                  fluid {
-                    sizes
-                    aspectRatio
-                    srcSet
-                    base64
-                    src
-                    originalImg
-                  }
+                  gatsbyImageData(layout: FULL_WIDTH)
                 }
               }
               description
@@ -75,14 +68,7 @@ const IndexPage = () => {
         edges {
           node {
             childImageSharp {
-              fluid {
-                sizes
-                aspectRatio
-                srcSet
-                base64
-                src
-                originalImg
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
@@ -128,8 +114,8 @@ const IndexPage = () => {
               return (
                 <li key={index}>
                   <Link to={`/projects/${edge.node.fields.slug}`}>
-                    <Img
-                      fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
+                    <GatsbyImage
+                      image={edge.node.frontmatter.cover.childImageSharp.gatsbyImageData}
                       alt={edge.node.frontmatter.title}
                     />
                     <p style={{ textAlign: "center" }}>
@@ -146,8 +132,8 @@ const IndexPage = () => {
         <div style={{ padding: "0 25%" }}>
           {data.books.edges.map((edge, index) => {
             return (
-              <Img
-                fluid={edge.node.childImageSharp.fluid}
+              <GatsbyImage
+                image={edge.node.childImageSharp.gatsbyImageData}
                 className={"indexCard"}
               />
             )

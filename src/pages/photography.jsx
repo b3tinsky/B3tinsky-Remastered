@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
 import * as photographyStyles from "../styles/pages/photography.module.scss"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const PhotographyPage = () => {
   const data = useStaticQuery(graphql`
@@ -21,14 +21,7 @@ const PhotographyPage = () => {
             name
             relativeDirectory
             childImageSharp {
-              fluid {
-                src
-                srcSet
-                base64
-                originalImg
-                sizes
-                aspectRatio
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
@@ -41,10 +34,9 @@ const PhotographyPage = () => {
       <Navbar />
       <section className={photographyStyles.photogrid}>
         {data.allFile.edges.map(({ node }, index) => (
-
-            <Img
+            <GatsbyImage
               key={index}
-              fluid={node.childImageSharp.fluid}
+              image={node.childImageSharp.gatsbyImageData}
               alt={node.name}
             />
         ))}

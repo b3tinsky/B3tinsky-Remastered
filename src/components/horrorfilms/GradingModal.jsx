@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import { ReactDimmer } from 'react-dimmer'
-import { useWindupString } from "windups"
+// import { useWindupString } from "windups"
 import * as ModalStyles from "../../styles/components/horrorfilms/grading_modal.module.scss"
 
 
@@ -42,9 +42,9 @@ const Modal = () => {
 function GradingModal(props) {
   const [isModalOpen, setModal] = useState(true);
 
-  const handleClick = () => {
-    setModal((prevState) => !prevState);
-  };
+  // const handleClick = () => {
+  //   setModal((prevState) => !prevState);
+  // };
 
   return (
     <>

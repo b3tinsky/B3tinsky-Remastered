@@ -3,7 +3,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
 import * as booksStyles from "../styles/pages/books.module.scss"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 const BooksPage = () => {
   const data = useStaticQuery(graphql`
@@ -34,14 +35,7 @@ const BooksPage = () => {
             name
             relativeDirectory
             childImageSharp {
-              fluid {
-                sizes
-                aspectRatio
-                srcSet
-                base64
-                src
-                originalImg
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
@@ -106,7 +100,7 @@ const BooksPage = () => {
               )
               .map((book, index) => (
                 <div key={index} className={booksStyles.image}>
-                  <Img fluid={book.childImageSharp.fluid} alt={book.name}/>
+                  <GatsbyImage image={book.childImageSharp.gatsbyImageData} alt={book.name}/>
                 </div>
               ))}
           </section>

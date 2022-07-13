@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as projectsStyles from "../styles/pages/projects.module.scss"
 
@@ -22,14 +22,7 @@ const ProjectsPage = () => {
               tags
               cover {
                 childImageSharp {
-                  fluid {
-                    sizes
-                    aspectRatio
-                    srcSet
-                    base64
-                    src
-                    originalImg
-                  }
+                  gatsbyImageData(layout: FULL_WIDTH)
                 }
               }
               description
@@ -58,8 +51,8 @@ const ProjectsPage = () => {
                 <div key={index} className={projectsStyles.post}>
                   <Link to={`/projects/${edge.node.fields.slug}`}>
                     <h1 style={{ textAlign: "center" }}>{edge.node.frontmatter.title}</h1>
-                    <Img
-                      fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
+                    <GatsbyImage
+                      image={edge.node.frontmatter.cover.childImageSharp.gatsbyImageData}
                       alt={edge.node.frontmatter.title}
                     />
                     <p>{edge.node.frontmatter.description}</p>

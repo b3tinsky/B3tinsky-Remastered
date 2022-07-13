@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import * as AboutStyles from "../styles/pages/about.module.scss"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faAward } from "@fortawesome/free-solid-svg-icons"
@@ -25,14 +25,7 @@ const AboutPage = () => {
             name
             relativeDirectory
             childImageSharp {
-              fluid {
-                aspectRatio
-                sizes
-                originalImg
-                base64
-                src
-                srcSet
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
@@ -50,9 +43,9 @@ const AboutPage = () => {
       </Link>
       <br />
       {data.allFile.edges.map(({ node }, index) => (
-        <Img
+        <GatsbyImage
           key={index}
-          fluid={node.childImageSharp.fluid}
+          image={node.childImageSharp.gatsbyImageData}
           style={{
             gridColumn: "2 / 5",
             width: "50%",
