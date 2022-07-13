@@ -1,6 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
+import * as blogStyles from "../styles/pages/blog.module.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTag, faTags } from "@fortawesome/free-solid-svg-icons"
+
+
 
 // Utilities
 import kebabCase from "lodash/kebabCase"
@@ -21,13 +26,16 @@ const TagsPage = ({
     <Helmet title={title} />
     <Layout>
       <div>
-        <h1>Tags</h1>
-        <ul>
+        
+        <h1><FontAwesomeIcon icon={faTags}/> Tags</h1>
+        <ul style={{listStyle:'none'}}>
           {group.map(tag => (
             <li key={tag.fieldValue}>
+              <span className={`tagPill-${tag.fieldValue}`} style={{float:'left', borderRadius: '0'}}>
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
+              [ {tag.totalCount} ] {tag.fieldValue}
               </Link>
+              </span>
             </li>
           ))}
         </ul>

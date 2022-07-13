@@ -6,7 +6,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Typewriter from "typewriter-effect"
 import { random } from "lodash"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
 
 
 const IndexPage = () => {

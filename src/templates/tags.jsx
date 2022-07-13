@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
+import * as blogStyles from "../styles/pages/blog.module.scss"
+
 // Components
 import { Link, graphql } from "gatsby"
 
@@ -14,8 +16,12 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <div>
-        <h1>{tagHeader}</h1>
-        <ul>
+        {/* <h1>{tagHeader}</h1> */}
+        <span className={`tagPill-${tag}`} style={{float:'left', fontSize:'100%'}}>
+        [ {totalCount} ] {tag}
+        </span>
+        <br />
+        <ul style={{listStyle:'none'}}>
           {edges.map(({ node }) => {
             const { slug } = node.fields
             const { title } = node.frontmatter
