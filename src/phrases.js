@@ -57,5 +57,25 @@ const phrasesFile = [
 "There are two tragedies in life. One is not to get your heart's desire. The other is to get it. - <b>George Bernard Shaw</b>",
 "He who hesitates is a damned fool. - <b>Mae West</b>",
 
+"Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things flow naturally forward in whatever way they like. - <b>Lao Tzu</b>",
+"You are scrupulously honest, frank, and straightforward. Therefore you have few friends.",
+"I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living, It's a way of looking at life through the wrong end of a telescope. Which is what I do, And that enables you to laugh at life's realities. - <b>Dr. Seuss</b>",
+"Take the attitude of a student, never be too big to ask questions, never know too much to learn something new. - <b>Og Mandino</b>",
+"In a world where there is so much to be done. I felt strongly impressed that there must be something for me to do. - <b>Dorothea Dix</b>",
+"The fragrance always remains in the hand that gives the rose. - <b>Heda Bejar</b>",
+"Democracy is the worst form of government, except for all the others. - <b>Winston S. Churchill</b>",
+"What you risk reveals what you value. - <b>Jeanette Winterson</b>",
+"Evil exists, but not withou good, like shadow exists, but not without light. - <b>Alfred de Musset</b>",
+"I've found that I can always do the things that people do in books. Really they are the only things I can do. - <b>F. Scott Fitzgerald</b>",
+"Where all think alike, no one thinks very much. - <b>Walter Lippmann</b>",
+"Power is the ultimate aphrodisiac. - <b>Chelsea G. Summers</b>",
+"Pray that your loneliness may spur you into finding something to live for, great enough to die for. - <b>Dag Hammarskjold</b>",
+"Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep. - <b>Scott Adams</b>",
+"Whatever you may be sure of, be sure of this-that you are dreadfully like other people. - <b>James Russel Lowell</b>",
+"Be the man your dog knows you to be. - <b>Mike Overlie</b>",
+"God rewards every act of obedience to His Will. - <b>Jaachynma N.E. Agu</b>",
+"You can't build a reputation on what you are going to do. - <b>Henry Ford</b>",
+"Happiness lies in the joy of achievement and the thrill of creative effort. - <b>Franklin D. Roosevelt</b>",
+
 ];
 export default phrasesFile;
