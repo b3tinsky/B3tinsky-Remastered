@@ -61,7 +61,7 @@ const IndexPage = () => {
           extension: { regex: "/(jpg)|(png)/" }
           absolutePath: { regex: "/(images/books)|(books)/" }
         }
-        sort: { fields: birthTime, order: DESC }
+        sort: { fields: name, order: DESC }
         limit: 1
       ) {
         edges {
