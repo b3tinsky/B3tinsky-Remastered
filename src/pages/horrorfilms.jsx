@@ -46,7 +46,7 @@ const HorrorFilmsPage = () => {
               <div className={horrorStyles.content}>
                 <h3>{node.name.slice(0, node.name.length-12)}</h3>
                 <a
-                  href={`https://www.google.com/search?q=intext%3A${node.name}`}
+                  href={`https://www.google.com/search?q=intext%3A${node.name.slice(0, node.name.length-5)}`}
                   className={
                     horrorStyles.btnD
                   }
