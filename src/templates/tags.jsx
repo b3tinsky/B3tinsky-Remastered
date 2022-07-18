@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
+import { faTags } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import * as blogStyles from "../styles/pages/blog.module.scss"
 
 // Components
@@ -36,7 +38,11 @@ const Tags = ({ pageContext, data }) => {
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-        <Link to="/tags"><p>All tags</p></Link>
+        <Link to="/tags">
+          <p className="fa-tags">
+            <FontAwesomeIcon icon={faTags} /> All tags
+          </p>
+        </Link>
       </div>
     </Layout>
   )

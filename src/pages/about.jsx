@@ -15,7 +15,7 @@ const AboutPage = () => {
     query {
       allFile(
         filter: {
-          extension: { regex: "/(jpg)/" }
+          name: { regex: "/ItsAMe/"}
           relativeDirectory: { regex: "/(styles/Images)/" }
         }
       ) {

@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import { faBug } from "@fortawesome/free-solid-svg-icons"
+import { faBug, faTags } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import * as blogStyles from "../styles/pages/blog.module.scss"
 
@@ -35,7 +35,7 @@ const BlogPage = () => {
           {" "}
           <Link to="/tags">
           <p>
-            <FontAwesomeIcon icon={faBug} transform="grow-5 up-5" />
+            <FontAwesomeIcon icon={faTags} transform="grow-5 up-5" />
           </p>
           </Link>
         </span>
