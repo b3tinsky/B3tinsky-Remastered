@@ -8,7 +8,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faAward } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import { WindupChildren, useWindupString } from "windups"
+// import { WindupChildren, useWindupString } from "windups"
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
@@ -35,13 +35,11 @@ const AboutPage = () => {
   return (
     <Layout>
       <Head title="About" />
-      <br />
       <Link to="/horrorfilms">
         <h3 className={AboutStyles.showMeTheRiddle}>
           <span role="img" aria-label="knife">🔪</span>
         </h3>
       </Link>
-      <br />
       {data.allFile.edges.map(({ node }, index) => (
         <GatsbyImage
           key={index}
@@ -60,10 +58,12 @@ const AboutPage = () => {
           alt="TheBert"
         />
       ))}
+      <br />
+
       <p style={{ color: "white" }}>
             "I'm a Computer Science student with an interest in software & web development. I love building things and learning new stuff. The purpose of this website is documenting my learning in a public manner (kind of like a Feynman Technique) while also giving a small glimpse into my world."
       </p>
-      <br />
+      {/* <br /> */}
 
       <Link to="/books">
         <h3>
