@@ -40,15 +40,15 @@ const Modal = () => {
 }
 
 function GradingModal(props) {
-  const [isModalOpen, setModal] = useState(true);
+  const [isModalOpen, setModal] = useState(props.show);
 
-  // const handleClick = () => {
-  //   setModal((prevState) => !prevState);
-  // };
+  const handleClick = () => {
+    setModal((prevState) => !prevState);
+  };
 
   return (
     <>
-    <ReactDimmer isOpen={isModalOpen} exitDimmer={setModal} zIndex={100} blur={1.5} >
+    <ReactDimmer isOpen={isModalOpen} exitDimmer={handleClick} zIndex={100} blur={1.5} >
     </ReactDimmer>
     {isModalOpen && <Modal />}
     </>

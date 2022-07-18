@@ -63,6 +63,7 @@ const BooksPage = () => {
     total = 0
   })
 
+  console.log("@art1nsky")
   return (
     <div>
       <Head title="Books" />

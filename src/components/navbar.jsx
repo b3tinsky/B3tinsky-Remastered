@@ -1,12 +1,16 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import * as navStyles from "../styles/components/navbar.module.scss";
-import { faTerminal } from "@fortawesome/free-solid-svg-icons";
+import { faTerminal, faQuestion } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import EasterEggsModal from "../components/index/EasterEggsModal"
+import { ReactDimmer } from "react-dimmer";
+
 class Navbar extends Component {
   state = {
     scrolled: false,
-    open: true
+    open: true,
+    modalShow: false
   }
 
   componentDidMount() {
@@ -32,7 +36,19 @@ class Navbar extends Component {
       this.setState({ open: true })
     }
   }
+  
+  handleModal = () => {
+    if (this.state.modalShow === true) {
+      this.setState({ modalShow: false })
+    } else {
+      this.setState({ modalShow: true })
+    }
+    // this.setState({ modalShow: true })
+
+  }
   render() {
+    // const [modalShow, setModalShow] = useState(true);
+    const { modalShow } = this.state
     const { scrolled } = this.state
     const { open } = this.state
     return (
@@ -55,7 +71,19 @@ class Navbar extends Component {
             {/* <li>
               <Link className={navStyles.listLink} to="/challenges">Challenges</Link>
             </li> */}
+            {/* <FontAwesomeIcon icon={faTerminal} onClick={this.handleClick}/> */}
+            <li>
+            <FontAwesomeIcon icon={faQuestion} style={{cursor:'pointer'}} className={navStyles.listLink} onClick={this.handleModal}/>
+            </li>
+
           </ul>
+          {modalShow && <EasterEggsModal closeModal={this.handleModal} />}
+          <ReactDimmer
+            isOpen={modalShow}
+            exitDimmer={this.handleModal}
+            zIndex={100}
+            blur={1.5}
+          />
       </nav>
     )
   }

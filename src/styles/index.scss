@@ -118,6 +118,16 @@ a {
         // transform: translate(-50%, -50%);
 
     }
+
+    
+    
+    h1 { font: 700 1.0rem "Raleway"; color: orange; }
+    h2 { font: 400 1.0rem "Raleway"; color: rgb(255, 255, 255); }
+    h3 { font: 700 1.0rem "Raleway"; color: rgb(255, 227, 151); }
+    p { font: 400 1.0rem "Raleway"; color: rgb(255, 255, 255); text-align: justify;}
+    li { font: 400 1.0rem "Raleway"; color: rgb(255, 255, 255); }
+    time { font: 700 1.0rem "Raleway"; color: hsl(39, 100%, 67%); }
+
 }
 
 @keyframes animate {
