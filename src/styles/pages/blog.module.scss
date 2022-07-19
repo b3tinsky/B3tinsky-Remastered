@@ -71,6 +71,7 @@ $Bash: rgb(189, 189, 189), rgb(255, 255, 255), bolder, normal;
 $Unity: rgb(58, 58, 58), rgb(255, 255, 255), bolder, normal;
 $Physics: rgb(255,255,255), rgb(0,0,0), bolder, normal;
 $Life: rgb(255, 150, 30), rgb(0,0,0), bolder, normal;
+$Finance: rgb(6, 133, 1), rgb(255, 255, 255), bolder, normal;
 
 [class*="Javascript"]{@include tag($Javascript...);}
 [class*="React"]     {@include tag($React...);}
@@ -87,6 +88,7 @@ $Life: rgb(255, 150, 30), rgb(0,0,0), bolder, normal;
 [class*="Unity"]    {@include tag($Unity...);}
 [class*="Physics"]    {@include tag($Physics...);}
 [class*="Life"]    {@include tag($Life...);}
+[class*="Finance"]    {@include tag($Finance...);}
 
 [class*="tagPill-"] {
     border-radius: 20px;
