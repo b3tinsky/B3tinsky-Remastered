@@ -76,6 +76,9 @@ const phrasesFile = [
 "God rewards every act of obedience to His Will. - <b>Jaachynma N.E. Agu</b>",
 "You can't build a reputation on what you are going to do. - <b>Henry Ford</b>",
 "Happiness lies in the joy of achievement and the thrill of creative effort. - <b>Franklin D. Roosevelt</b>",
-
+"Normal is not something to aspire to, it's something to get away from. - <b>Jodie Foster</b>",
+"The object of life is not to be on the side of the masses, but to escape finding oneself in the ranks of the insane. - <b>Marcus Aurelius</b>",
+"The journey of a thousand miles must begin with a single step. - <b>Lao Tzu</b>",
+"Nothing is worth more than this day. You cannot relive yesterday. Tomorrow is still beyond your reach. - <b>Johann Wolfgang von Goethe</b>",
 ];
 export default phrasesFile;
