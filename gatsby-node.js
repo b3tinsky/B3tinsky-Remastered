@@ -17,6 +17,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
 module.exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+  const blogPage = path.resolve("./src/pages/blog.jsx")
   const blogTemplate = path.resolve("./src/templates/blog.js")
   const tagTemplate = path.resolve("src/templates/tags.jsx")
 
@@ -34,6 +35,22 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+
+      articles: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/posts/" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              tags
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+
       tagsGroup: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
@@ -46,6 +63,10 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
+
+
+
+  
 
   // Extract tag data from query
   const tags = res.data.tagsGroup.group
@@ -62,12 +83,28 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
 
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+  res.data.articles.edges.forEach(edge => {
     createPage({
       component: blogTemplate,
       path: `/blog/${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug,
+      },
+    })
+  })
+
+  const posts = res.data.articles.edges
+  const postsPerPage = 10
+  const numPages = Math.ceil(posts.length / postsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: blogPage,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
       },
     })
   })

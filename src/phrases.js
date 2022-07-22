@@ -56,8 +56,7 @@ const phrasesFile = [
 "It's not a 9-5 job. It's an every moment you're awake job because you actually enjoy the work that you're doing.<br><b>Jeffrey Kalmikoff</b>",
 "There are two tragedies in life. One is not to get your heart's desire. The other is to get it.<br><b>George Bernard Shaw</b>",
 "He who hesitates is a damned fool.<br><b>Mae West</b>",
-
-"Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things flow nat urally forward in whatever way they like.<br><b>Lao Tzu</b>",
+"Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things flow naturally forward in whatever way they like.<br><b>Lao Tzu</b>",
 "You are scrupulously honest, frank, and straightforward. Therefore you have few friends.",
 "I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living, It's a way of looking at life through the wrong end of a telescope. Which is what I do, And that enables you to laugh at life's realities.<br><b>Dr. Seuss</b>",
 "Take the attitude of a student, never be too big to ask questions, never know too much to learn something new.<br><b>Og Mandino</b>",
@@ -80,6 +79,8 @@ const phrasesFile = [
 "The object of life is not to be on the side of the masses, but to escape finding oneself in the ranks of the insane.<br><b>Marcus Aurelius</b>",
 "The journey of a thousand miles must begin with a single step.<br><b>Lao Tzu</b>",
 "Nothing is worth more than this day. You cannot relive yesterday. Tomorrow is still beyond your reach.<br><b>Johann Wolfgang von Goethe</b>",
-"If you don't know where you are going, any road will get you there .<br><b>Lewis Carroll</b>",
+"If you don't know where you are going, any road will get you there.<br><b>Lewis Carroll</b>",
+"Today's weirdness is tomorrow's reason why.<br><b>Hunter S. Thompson</b>",
+"When you're the first person whose beliefs are different from what everyone else believes, you're basically saying 'I'm right, and everybody else is wrong.' That's a very unpleasant position to be in. It's at once exhilarating and at the same time, an invitation to be attacked.<br><b>Larry Ellison</b>",
 ];
 export default phrasesFile;
