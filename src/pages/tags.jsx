@@ -61,6 +61,7 @@ TagsPage.propTypes = {
     }),
   }),
 }
+        filter: { fileAbsolutePath: { regex: "/posts/" } }
 
 export default TagsPage
 
@@ -71,7 +72,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 2000) {
+    allMarkdownRemark(
+      limit: 2000
+      filter: { fileAbsolutePath: { regex: "/posts/" } }
+      ) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

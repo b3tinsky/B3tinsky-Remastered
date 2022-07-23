@@ -17,7 +17,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
 module.exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  const blogPage = path.resolve("./src/pages/blog.jsx")
+  const blogPage = path.resolve("./src/pages/blogpage.jsx")
   const blogTemplate = path.resolve("./src/templates/blog.js")
   const tagTemplate = path.resolve("src/templates/tags.jsx")
 
@@ -51,7 +51,10 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
 
-      tagsGroup: allMarkdownRemark(limit: 2000) {
+      posts_tags: allMarkdownRemark(
+        limit: 2000
+        filter: { fileAbsolutePath: { regex: "/posts/" } }
+        ) {
         group(field: frontmatter___tags) {
           fieldValue
         }
@@ -69,7 +72,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   
 
   // Extract tag data from query
-  const tags = res.data.tagsGroup.group
+  const tags = res.data.posts_tags.group
 
   // Make tag pages
   tags.forEach(tag => {
