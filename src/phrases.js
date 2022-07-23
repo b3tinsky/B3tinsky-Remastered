@@ -63,6 +63,7 @@ const phrasesFile = [
 "In a world where there is so much to be done. I felt strongly impressed that there must be something for me to do.<br><b>Dorothea Dix</b>",
 "The fragrance always remains in the hand that gives the rose.<br><b>Heda Bejar</b>",
 "Democracy is the worst form of government, except for all the others.<br><b>Winston S. Churchill</b>",
+"Responsibility is the price of greatness.<br><b>Winston S. Churchill</b>",
 "What you risk reveals what you value.<br><b>Jeanette Winterson</b>",
 "Evil exists, but not without good, like shadow exists, but not without light.<br><b>Alfred de Musset</b>",
 "I've found that I can always do the things that people do in books. Really they are the only things I can do.<br><b>F. Scott Fitzgerald</b>",
@@ -82,5 +83,7 @@ const phrasesFile = [
 "If you don't know where you are going, any road will get you there.<br><b>Lewis Carroll</b>",
 "Today's weirdness is tomorrow's reason why.<br><b>Hunter S. Thompson</b>",
 "When you're the first person whose beliefs are different from what everyone else believes, you're basically saying 'I'm right, and everybody else is wrong.' That's a very unpleasant position to be in. It's at once exhilarating and at the same time, an invitation to be attacked.<br><b>Larry Ellison</b>",
+"Wealth is the ability to fully experience life.<br><b>Henry David Thoreau</b>",
+"I'm a great believer in luck, and I find the harder I work, the more I have of it.<br><b>Thomas Jefferson</b>",
 ];
 export default phrasesFile;

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import * as blogStyles from "../styles/pages/blog.module.scss"
 
 export const data = graphql`
-query ($skip: Int!, $limit: Int!){
+query ($skip: Int, $limit: Int){
   allMarkdownRemark(
     filter: {fileAbsolutePath: {regex: "/posts/"}}, 
     sort: { fields: frontmatter___date, order: DESC }
