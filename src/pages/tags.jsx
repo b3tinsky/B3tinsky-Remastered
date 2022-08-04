@@ -61,7 +61,7 @@ TagsPage.propTypes = {
     }),
   }),
 }
-        filter: { fileAbsolutePath: { regex: "/posts/" } }
+        // filter: { fileAbsolutePath: { regex: "/posts/" } }
 
 export default TagsPage
 
