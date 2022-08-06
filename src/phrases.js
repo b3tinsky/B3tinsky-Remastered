@@ -144,5 +144,6 @@ const phrasesFile = [
 "Nature is pleased with simplicity. And nature is no dummy.<br><b>Isaac Newton</b>",
 "A bone to the dog is not charity. Charity is the bone shared with the dog, when you are just as hungry as the dog.<br><b>Jack London</b>",
 "We live in a society exquisitely dependent on science and technology, in which hardly anyone knows anything about science and technology.<br><b>Carl Sagan</b>",
+"It's unbelievable how much you don't know about the game you've been playing all your life.<br><b>Mickey Mantle</b>",
 ];
 export default phrasesFile;
