@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const { faTemperatureEmpty } = require("@fortawesome/free-solid-svg-icons");
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -59,7 +61,9 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 750,
-              linkImagesToOriginal: false
+              linkImagesToOriginal: false,
+              disableBgImageOnAlpha: true,
+              backgroundColor: "none"
             }
           }
         ]

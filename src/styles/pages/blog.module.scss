@@ -79,6 +79,7 @@ $Unity: rgb(58, 58, 58), rgb(255, 255, 255), bolder, normal;
 $Physics: rgb(255,255,255), rgb(0,0,0), bolder, normal;
 $Life: rgb(255, 150, 30), rgb(0,0,0), bolder, normal;
 $Finance: rgb(6, 133, 1), rgb(255, 255, 255), bolder, normal;
+$Entrepreneurship: rgba(255, 174, 0, 0.993), rgb(0, 0, 0), bolder, normal;
 
 [class*="Javascript"]{@include tag($Javascript...);}
 [class*="React"]     {@include tag($React...);}
@@ -96,6 +97,7 @@ $Finance: rgb(6, 133, 1), rgb(255, 255, 255), bolder, normal;
 [class*="Physics"]    {@include tag($Physics...);}
 [class*="Life"]    {@include tag($Life...);}
 [class*="Finance"]    {@include tag($Finance...);}
+[class*="Entrepreneurship"]    {@include tag($Entrepreneurship...);}
 
 [class*="tagPill-"] {
     border-radius: 20px;
