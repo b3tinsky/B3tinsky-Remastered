@@ -5,7 +5,7 @@ tags: ["CS"]
 ---
 
 ### Preface
-Before we start, make sure to already have a GPG key. If you don't have one, check out [this post](www.b3tinsky.dev/blog/gpgkeypair).
+Before we start, make sure to already have a GPG key. If you don't have one, check out [this post](gpgkeypair).
 
 ### Adding key to Github
 In your Github settings, look for the __SSH and GPG keys__ in the Access section.
