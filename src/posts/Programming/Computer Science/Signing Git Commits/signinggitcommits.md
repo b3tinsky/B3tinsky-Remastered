@@ -32,7 +32,10 @@ Before doing a commit or anything else, we must first create a user config file 
     gpgsign = true
 ```
 
-When doing a commit, you must add the __-S flag__, lkike this:
+When doing a commit, you must add the __-S flag__, like this:
 ```console
 git commit -S -m "Commit message"
 ```
+
+### Reference
+📺 [Signing and Verifying Git Commits on the Command Line and GitHub](https://youtu.be/4166ExAnxmo)
