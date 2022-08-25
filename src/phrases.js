@@ -145,5 +145,6 @@ const phrasesFile = [
 "A bone to the dog is not charity. Charity is the bone shared with the dog, when you are just as hungry as the dog.<br><b>Jack London</b>",
 "We live in a society exquisitely dependent on science and technology, in which hardly anyone knows anything about science and technology.<br><b>Carl Sagan</b>",
 "It's unbelievable how much you don't know about the game you've been playing all your life.<br><b>Mickey Mantle</b>",
+"If you really want things to change, you can make them change no matter where you are.<br><b>Hannah Harrington</b>",
 ];
 export default phrasesFile;
