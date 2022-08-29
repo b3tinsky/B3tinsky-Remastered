@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
@@ -44,29 +44,41 @@ const CertificationsPage = () => {
     }
   `)
 
+
   let years = []
 
   data.allDirectory.edges.map(({ node }) => years.push(node.base))
 
-  let books = []
+  let certs = []
 
-  data.allFile.edges.map(({ node }) => books.push(node))
+  data.allFile.edges.map(({ node }) => certs.push(node))
+
+  const [displayCert, setDisplayCert] = useState(certs[0])
+
+
+  const handleMouseEnter = e => {
+    e.target.style.color = "orange"
+    setDisplayCert(certs[e._targetInst.index])
+  }
+  const handleMouseLeave = e => {
+    e.target.style.color = "white"
+  }
 
   return (
     <div>
       <Head title="Certifications" />
       <Navbar />
-      <br />
-      <br />
-      <br />
-      <br />
 
       <section className={certificationStyles.photogrid}>
-        {books.map((book, index) => (
-          <div key={index} className={certificationStyles.image}>
-            <GatsbyImage image={book.childImageSharp.gatsbyImageData} alt={book.name} />
-          </div>
-        ))}
+        <ul className={certificationStyles.certs_text}>
+          {certs.map((cert, index) => (
+            <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>{cert.name}</li>
+          ))}
+        </ul>
+
+        <div className={certificationStyles.certs_image}>
+            <GatsbyImage image={displayCert.childImageSharp.gatsbyImageData} />
+        </div>
       </section>
     </div>
   )

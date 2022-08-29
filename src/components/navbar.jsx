@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import * as navStyles from "../styles/components/navbar.module.scss";
-import { faTerminal, faQuestion } from "@fortawesome/free-solid-svg-icons";
+import { faTerminal, faEgg } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import EasterEggsModal from "../components/index/EasterEggsModal"
 import { ReactDimmer } from "react-dimmer";
@@ -73,7 +73,7 @@ class Navbar extends Component {
             </li> */}
             {/* <FontAwesomeIcon icon={faTerminal} onClick={this.handleClick}/> */}
             <li>
-            <FontAwesomeIcon icon={faQuestion} style={{cursor:'pointer'}} className={navStyles.listLink} onClick={this.handleModal}/>
+            <FontAwesomeIcon icon={faEgg} style={{cursor:'pointer'}} className={navStyles.listLink} onClick={this.handleModal}/>
             </li>
 
           </ul>

@@ -5,7 +5,7 @@ import Head from "../components/head"
 import { GatsbyImage } from "gatsby-plugin-image"
 import * as AboutStyles from "../styles/pages/about.module.scss"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { faAward } from "@fortawesome/free-solid-svg-icons"
+import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 // import { WindupChildren, useWindupString } from "windups"
@@ -40,6 +40,8 @@ const AboutPage = () => {
           <span role="img" aria-label="knife">🔪</span>
         </h3>
       </Link>
+      <br />
+      <br />
       {data.allFile.edges.map(({ node }, index) => (
         <GatsbyImage
           key={index}
@@ -64,6 +66,22 @@ const AboutPage = () => {
             "I'm a Computer Science student with an interest in software & web development. I love building things and learning new stuff. The purpose of this website is documenting my learning in a public manner (kind of like a Feynman Technique) while also giving a small glimpse into my world."
       </p>
       {/* <br /> */}
+
+      <Link to="/certifications">
+        <h3>
+          <span role="img" aria-label="paper">
+          📃
+          </span>{" "}
+          Certifications
+        </h3>
+      </Link>
+      <p>
+        A small showroom for my digital certifications. This page also helps me identify which certifications are more relevant when applying to a new job.{" "}
+        <Link to="/certifications" style={{ color: "orange" }}>
+          See my certifications here
+        </Link>
+        .
+      </p>
 
       <Link to="/books">
         <h3>
@@ -101,19 +119,6 @@ const AboutPage = () => {
         a photography session, contact me ;)
       </p>
 
-      {/* Search here for scary movies >:) */}
-      {/* <Link to="/horrorfilms">
-        <h3 className={AboutStyles.showMeTheRiddle}>
-          <span role="img" aria-label="knife">
-            🔪
-          </span>{" "}
-          Horror Movie Stash{" "}
-          <span role="img" aria-label="knife">
-            🔪
-          </span>
-        </h3>
-      </Link> */}
-
       <h3>
         <span role="img" aria-label="phone">📞 </span> Contact Me
       </h3>
@@ -125,9 +130,9 @@ const AboutPage = () => {
       <Link to="https://www.linkedin.com/in/betorendon/">
         <FontAwesomeIcon icon={faLinkedin} className={AboutStyles.brandIcon} transform="grow-20" />
       </Link>
-
-      <Link to="/certifications">
-        <FontAwesomeIcon icon={faAward} className={AboutStyles.brandIcon} transform="grow-20" />
+      
+      <Link to="https://www.datacamp.com/profile/betorendonruiz">
+        <FontAwesomeIcon icon={faDatabase} className={AboutStyles.brandIcon} transform="grow-20" />
       </Link>
     </Layout>
   )

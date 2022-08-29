@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 .photogrid {
+    height: 90vh;
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 5%;
-    // grid-template-columns: auto auto auto auto auto;
-    // grid-gap: 5px;
+    padding: 10vh 5% 0 5%;
 }
 
-.image {
-    // display: inherit;
-    // transition: 1s;
-    flex: 33%;
-    max-width: 33%;
+.certs_text {
+    overflow: scroll;
+    list-style-type: none;
+    flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
+    flex-basis: 30%; /* sets initial width to 70% */
+    padding: 5%;
+}
+
+.certs_image {
+    // flex: 2;
+    flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
+    flex-basis: 70%; /* sets initial width to 70% */
+    max-width: 50%;
+    padding: 5%;
 }
 
 // .image:hover {
@@ -25,11 +32,22 @@
 
 // }
 
-@media(max-width: 770px) {
-    .image:hover {
-        transform: scale(1.2);
+@media only screen and (max-width: 900px) {
+    .photogrid {
+        flex-direction: column-reverse;
     }
-}
-Img {
-    border-radius: 10px;
-}
+    .certs_image {
+        flex: 1;
+        flex-shrink: unset; /* shrinks to 0 to apply 70% width*/
+        flex-basis: unset; /* sets initial width to 70% */
+        max-width: 100%;
+        // padding-top: 55%;
+
+    }
+
+    .certs_text {
+        flex: 2;
+        flex-shrink: unset; /* shrinks to 0 to apply 70% width*/
+        flex-basis: unset; /* sets initial width to 70% */
+    }
+  }
