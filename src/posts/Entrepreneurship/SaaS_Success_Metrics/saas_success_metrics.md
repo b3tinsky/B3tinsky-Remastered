@@ -20,7 +20,7 @@ Conversion rate is an important metric to consider when making a strategy (marke
 
 __Monthly Recurring Revenue__ is what you can expect to earn at the end of each month. It's easier to determine when you have a subscription based model, since you can combine the MRR for every customer regardless if they are different (they could be different depending on which plan they bought, if they used a discount, if they bought it anually/monthly, etc.). MRR is an important metric to VCs, since it's growth indicates a stable income your business.
 
-### Annual Recurring Revenue (MRR)
+### Annual Recurring Revenue (ARR)
 
 ![ARR Equations](./arrequations.png)
 
