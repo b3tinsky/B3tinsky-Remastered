@@ -196,5 +196,17 @@ const phrasesFile = [
 "One does not have to be a philosopher to be a successful artist, but he does have to be an artist to be a successful philosopher. His nature is to view the world in an unpredictable albeit useful light.<br><b>Criss Jami</b>",
 "That's the thing about pain, it demands to be felt.<br><b>John Green</b>",
 "To will is to select a goal, determine a course of action that will bring one to that goal, and then hold to that action till the goal is reached. The key is action.<br><b>Michael Hanson</b>",
+"Life throws challenges but with patience and resilience you can convert every challenge into a new opportunity to grow.<br><b>Amit Ray</b>",
+"Don't let mental blocks control you. Set yourself free. Confront your fear and turn the mental blocks into building blocks.<br><b>Dr Roopleen</b>",
+"Art doesn't give rise to anything in us that isn't already there. It simply stirs our curious consciousness and sparks a fire that illuminates who we have always wanted to be.<br><b>Kamand Kojouri</b>",
+"Just to have it is enough.",
+"The most wonderful and the strongest things in the world, you know, are just the things which no one can see.<br><b>Charles Kingsley</b>",
+"True repentance means making amends with the person when at all possible.<br><b>Lawana Blackwell</b>",
+"It is better to be violent, if there is violence in our hearts, than to put on the cloak of nonviolence to cover impotence.<br><b>Mahatma Gandhi</b>",
+"Ritual is the way you carry the presence of the sacred. Ritual is the spark that must not go out.<br><b>Christina Baldwin</b>",
+"If your dream is a big dream, and if you want your life to work on the high level that you say you do, there's no way arround doing the work it takes to get you there.<br><b>Joyce Chapman</b>",
+"A ship in port is safe, but that's not what ships are built for.<br><b>Grace Murray Hopper</b>",
+"Bravery comes along as a gradual accumulation of discipline.<br><b>Buzz Aldrin</b>",
+"The trouble with the rat race is that even if you win, you're still a rat.<br><b>Lily Tomlin</b>",
 ];
 export default phrasesFile;
