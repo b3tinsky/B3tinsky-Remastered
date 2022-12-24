@@ -72,7 +72,7 @@ const CertificationsPage = () => {
       <section className={certificationStyles.photogrid}>
         <ul className={certificationStyles.certs_text}>
           {certs.map((cert, index) => (
-            <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>{cert.name}</li>
+            <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`${`certificationStyles.box_grading_${cert.name.match(/\(\*\)/) ? "LEG" : "NUL"}`}`}>{cert.name}</li>
           ))}
         </ul>
 

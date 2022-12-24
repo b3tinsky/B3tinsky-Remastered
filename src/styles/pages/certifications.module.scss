@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@mixin grading($border-width, $border-color, $border-style) {
+    &:hover {
+        border-width: $border-width;
+        border-color: $border-color;
+        border-style: $border-style;
+        transition: 0s;
+    }
+}
+$NUL: 5px, rgb(66, 66, 66), solid;
+$LEG: 5px, rgb(119, 0, 255), solid;
+[class*="box_grading_NUL"] {@include grading($NUL...);}
+[class*="box_grading_LEG"] {
+    @include grading($LEG...);
+    color:#66fad5 !important;
+}
+
 
 .photogrid {
     height: 90vh;

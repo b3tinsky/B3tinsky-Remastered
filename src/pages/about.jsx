@@ -63,7 +63,7 @@ const AboutPage = () => {
       <br />
 
       <p style={{ color: "white" }}>
-            "I'm a Computer Science student with an interest in software & web development. I love building things and learning new stuff. The purpose of this website is documenting my learning in a public manner (kind of like a Feynman Technique) while also giving a small glimpse into my world."
+            I'm a software engineer with an interest in data engineering & web development. I love building things and learning new stuff. The purpose of this website is documenting my learning in a public manner (kind of like a Feynman Technique) while also giving a small glimpse into who I am.
       </p>
       {/* <br /> */}
 
@@ -123,17 +123,17 @@ const AboutPage = () => {
         <span role="img" aria-label="phone">📞 </span> Contact Me
       </h3>
       <br/>
-      <Link to="https://github.com/betorendon">
+      <a href="https://github.com/betorendon">
         <FontAwesomeIcon icon={faGithub} className={AboutStyles.brandIcon} transform="grow-20"/>
-      </Link>
+      </a>
       
-      <Link to="https://www.linkedin.com/in/betorendon/">
+      <a href="https://www.linkedin.com/in/betorendon/">
         <FontAwesomeIcon icon={faLinkedin} className={AboutStyles.brandIcon} transform="grow-20" />
-      </Link>
+      </a>
       
-      <Link to="https://www.datacamp.com/profile/betorendonruiz">
+      <a href="https://www.datacamp.com/profile/betorendonruiz">
         <FontAwesomeIcon icon={faDatabase} className={AboutStyles.brandIcon} transform="grow-20" />
-      </Link>
+      </a>
     </Layout>
   )
 }
