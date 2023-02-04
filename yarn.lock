@@ -7381,11 +7381,6 @@ gatsby-plugin-utils@^3.12.0:
     mini-svg-data-uri "^1.4.4"
     svgo "^2.8.0"
 
-gatsby-plugin-yandex-metrika@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-yandex-metrika/-/gatsby-plugin-yandex-metrika-2.5.0.tgz#e915bbdf0c392111c8927a8f426021adedf42a6e"
-  integrity sha512-2dJr9qpAwrKJTNGtr5FJDMIkQd3Kd5l4iNOMGZodvfe5uv7lgy9WH7uoFDeeFSvsg7cg+SKAKETPN1hEUry+zg==
-
 gatsby-react-router-scroll@^5.18.0:
   version "5.18.0"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-5.18.0.tgz#9ccbfcc4b7cffac897162fa789f52c7513c9f7eb"
@@ -8475,9 +8470,9 @@ htmlparser2@^8.0.1:
     entities "^4.3.0"
 
 http-cache-semantics@^4.0.0, http-cache-semantics@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.1.0.tgz#49e91c5cbf36c9b94bcfcd71c23d5249ec74e390"
-  integrity sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz#abe02fcb2985460bf0323be664436ec3476a6d5a"
+  integrity sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==
 
 http-errors@1.8.0:
   version "1.8.0"
