@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import { GatsbyImage } from "gatsby-plugin-image"
 import * as AboutStyles from "../styles/pages/about.module.scss"
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faLinkedin, faMedium } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -123,12 +123,16 @@ const AboutPage = () => {
         <span role="img" aria-label="phone">📞 </span> Contact Me
       </h3>
       <br/>
-      <a href="https://github.com/betorendon">
+      <a href="https://github.com/b3tinsky">
         <FontAwesomeIcon icon={faGithub} className={AboutStyles.brandIcon} transform="grow-20"/>
       </a>
       
       <a href="https://www.linkedin.com/in/betorendon/">
         <FontAwesomeIcon icon={faLinkedin} className={AboutStyles.brandIcon} transform="grow-20" />
+      </a>
+      
+      <a href="https://medium.com/@humbertorendonr">
+        <FontAwesomeIcon icon={faMedium} className={AboutStyles.brandIcon} transform="grow-20" />
       </a>
       
       <a href="https://www.datacamp.com/profile/betorendonruiz">
