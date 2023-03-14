@@ -208,5 +208,6 @@ const phrasesFile = [
 "A ship in port is safe, but that's not what ships are built for.<br><b>Grace Murray Hopper</b>",
 "Bravery comes along as a gradual accumulation of discipline.<br><b>Buzz Aldrin</b>",
 "The trouble with the rat race is that even if you win, you're still a rat.<br><b>Lily Tomlin</b>",
+"Everyone holds his fortune in his own hands, like a sculptor the raw material he will fashion into a figure. But it's the same with that type of artistic activity as with all others: We are merely born with the capability to do it. The skill to mold the material into what we want must be learned and attentively cultivated.<br><b>Johann Wolfgang Von Goethe</b>",
 ];
 export default phrasesFile;
