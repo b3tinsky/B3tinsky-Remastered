@@ -3,18 +3,19 @@ import Navbar from './navbar'
 import '../styles/index.scss'
 import * as layoutStyles from '../styles/components/layout.module.scss'
 
-const Layout = (props) => {
-    return (
 
-    <div>
-        <Navbar />
+const Layout = (props) => {    
+    return (
+        <div>
+            <Navbar />
             <div className={layoutStyles.container}>
                 <div className={layoutStyles.content}>
-                    {props.children}
+                {   
+                    props.children
+                }
                 </div>
             </div>
-    </div>
-
+        </div>
     )
 }
 

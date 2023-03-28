@@ -1,3 +1,5 @@
+import { random } from "lodash"
+
 const phrasesFile = [
 "Idle hands are the devil's workshop; idle lips are his mouthpiece<br>Proverbs 16:27-29",
 "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth<br><b>Marcus Aurelius</b>",
@@ -209,5 +211,6 @@ const phrasesFile = [
 "Bravery comes along as a gradual accumulation of discipline.<br><b>Buzz Aldrin</b>",
 "The trouble with the rat race is that even if you win, you're still a rat.<br><b>Lily Tomlin</b>",
 "Everyone holds his fortune in his own hands, like a sculptor the raw material he will fashion into a figure. But it's the same with that type of artistic activity as with all others: We are merely born with the capability to do it. The skill to mold the material into what we want must be learned and attentively cultivated.<br><b>Johann Wolfgang Von Goethe</b>",
-];
+].sort(() => random() - 0.5).slice(1, 20);
+
 export default phrasesFile;

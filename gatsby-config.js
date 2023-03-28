@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const { faTemperatureEmpty } = require("@fortawesome/free-solid-svg-icons");
 
 module.exports = {
   /* Your site config here */
@@ -14,6 +13,15 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve:'gatsby-plugin-manifest',
+      options: {
+        name: `B3TINSKY`,
+        short_name: `B3`,
+        start_url: `/`,
+        icon: `static/favicon.ico`,
+      }
+    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',

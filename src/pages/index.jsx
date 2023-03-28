@@ -1,12 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import phrasesFile from "../phrases.js"
+import phrasesFile from "../phrases.jsx"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Typewriter from "typewriter-effect"
-import { random } from "lodash"
-
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -77,7 +75,6 @@ const IndexPage = () => {
 
   const phrases = phrasesFile
 
-  phrases.sort(() => random() - 0.5);
   return (
     <div className="homeBackground">
       <Layout>
@@ -87,7 +84,6 @@ const IndexPage = () => {
           options={{loop: true, autoStart: true, strings: phrases, pauseFor: 5000, delay: 50, deleteSpeed: 10}}
           className={"typeWriterStyle"}
         />
-
         </div>
         <h3 className={"indexH3"}>Latest Blog Posts</h3>
         <div className={"indexCard"}>
