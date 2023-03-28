@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
-
 .logo {
   position: fixed;
   float: left;
-  margin: 16px 36px;
+  margin: 20px 26px;
   color: orange;
-  font-weight: normal;
+  font-weight: 900;
   font-size: 30px;
-  font-family: 'Monoton';
+  font-family: 'Fira Sans', sans-serif;
   &::before {
     color: orange;
     transition: .5s;
@@ -54,8 +52,8 @@ nav {
         text-decoration: none;
         color: white;
         font-size: 20px;
-        font-family: 'Monoton';
-        font-weight: bold;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 900;
         &:hover {
           text-shadow: 0 10px 1px white, 0 -10px 1px rgb(255, 115, 0);
           color: orange;
@@ -88,7 +86,7 @@ nav {
   .logo {
       position: fixed;
       top: 0;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
   }
 
   nav ul {
@@ -134,7 +132,7 @@ nav {
   color: white;
   font-weight: bold;
   background-color: inherit;
-  font-family: 'Monoton';
+  font-family: 'Fira Sans', sans-serif;
   margin: 0;
 }
 

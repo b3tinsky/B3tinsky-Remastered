@@ -79,7 +79,7 @@ const IndexPage = () => {
 
   phrases.sort(() => random() - 0.5);
   return (
-    <div id="homeBackground">
+    <div className="homeBackground">
       <Layout>
         <Head title="Home" />
         <div className={"typeWriterDiv"}>
@@ -141,6 +141,7 @@ const IndexPage = () => {
       </Layout>
     
     </div>
+
   )
 }
 
