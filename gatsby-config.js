@@ -19,7 +19,7 @@ module.exports = {
         name: `B3TINSKY`,
         short_name: `B3`,
         start_url: `/`,
-        icon: `static/favicon.ico`,
+        icon: `static/favicon-32x32.png`,
       }
     },
     'gatsby-plugin-sass',
