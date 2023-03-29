@@ -8,6 +8,32 @@
 .title {
     font-family: "Fira Sans";
     font-weight: 900;
+    flex: 3 0 0;
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    flex: 1 0 0;
+    justify-content: flex-end;
+    
+    a {
+        color: white;
+            margin:0 5%;
+    }
+
+    a:hover {
+        color: orange;
+    }
+    // p {
+    //     margin:0 10px;
+    // }
 }
 
 .posts {
@@ -22,10 +48,6 @@
     font-family: "Fira Sans";
     color: #9c95ff;
     text-align: center;
-}
-
-[class*=fa-tags]:hover {
-    color: orange;
 }
 
 .post {

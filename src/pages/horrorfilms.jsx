@@ -13,7 +13,7 @@ const HorrorFilmsPage = () => {
     query {
       allFile(
         filter: {
-          extension: { regex: "/(jpg)|(png)/" }
+          extension: { regex: "/(jpg)|(png)|(webp)|(jpeg)/" }
           relativeDirectory: { regex: "/(images/horrorfilms)|(horrorfilms)/" }
         }
       ) {
