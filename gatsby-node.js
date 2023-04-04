@@ -51,7 +51,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
 
-      posts_tags: allMarkdownRemark(
+      tags: allMarkdownRemark(
         limit: 2000
         filter: { fileAbsolutePath: { regex: "/posts/" } }
         ) {
@@ -72,7 +72,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   
 
   // Extract tag data from query
-  const tags = res.data.posts_tags.group
+  const tags = res.data.tags.group
 
   // Make tag pages
   tags.forEach(tag => {
@@ -131,4 +131,16 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+  
+  res.data.allMarkdownRemark.edges.forEach(edge => {
+    createPage({
+      component: blogTemplate,
+      path: `/miniprojects/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug,
+      },
+    })
+  })
+
+
 }

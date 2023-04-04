@@ -84,6 +84,7 @@
 $Javascript      : rgb(255, 230, 8), black, bold, normal;
 $React           : rgb(82, 186, 255), white,bold, normal;
 $Python          : #3776ab, #ffd343, bold, normal;
+$Spark           : #c5490f, #1d1d1d, bold, normal;
 $Design          : rgb(255, 144, 255), white, bold, normal;
 $Kotlin          : rgb(192, 57, 255), rgb(0, 0, 0), bold, normal;
 $WebGL           : rgb(255, 255, 255), rgb(136, 0, 0), bold, normal;
@@ -102,6 +103,7 @@ $Entrepreneurship: rgba(255, 174, 0, 0.993), rgb(0, 0, 0), bold, normal;
 [class*="Javascript"]{@include tag($Javascript...);}
 [class*="React"]     {@include tag($React...);}
 [class*="Python"]    {@include tag($Python...);}
+[class*="Spark"]     {@include tag($Spark...);}
 [class*="Design"]    {@include tag($Design...);}
 [class*="Kotlin"]    {@include tag($Kotlin...);}
 [class*="WebGL"]    {@include tag($WebGL...);}

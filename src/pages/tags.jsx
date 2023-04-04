@@ -1,9 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
-import * as blogStyles from "../styles/pages/blog.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTag, faTags } from "@fortawesome/free-solid-svg-icons"
+import { faTags } from "@fortawesome/free-solid-svg-icons"
 
 
 

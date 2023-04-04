@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import { faArrowLeftLong, faArrowRightLong, faTags } from "@fortawesome/free-solid-svg-icons"

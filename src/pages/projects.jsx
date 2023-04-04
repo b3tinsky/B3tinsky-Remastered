@@ -10,8 +10,8 @@ import * as projectsStyles from "../styles/pages/projects.module.scss"
 const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/projects/" } }
+      projects: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/src/projects/" } }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
@@ -34,6 +34,34 @@ const ProjectsPage = () => {
           }
         }
       }
+      
+      miniprojects: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/src/miniprojects/" } }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date(formatString: "MMM, DD YYYY")
+              tags
+              cover {
+                childImageSharp {
+                  gatsbyImageData(layout: FULL_WIDTH)
+                }
+              }
+              description
+            }
+
+            fields {
+              slug
+            }
+          }
+        }
+      }
+
+
+
     }
   `)
 
@@ -46,10 +74,45 @@ const ProjectsPage = () => {
           <h1 className={projectsStyles.title}>Projects</h1>
           <hr />
           <section className={projectsStyles.projectgrid}>
-            {data.allMarkdownRemark.edges.map((edge, index) => {
+            {data.projects.edges.map((edge, index) => {
               return (
                 <div key={index} className={projectsStyles.post}>
                   <Link to={`/projects/${edge.node.fields.slug}`}>
+                    <h1 style={{ textAlign: "center" }}>{edge.node.frontmatter.title}</h1>
+                    <GatsbyImage
+                      image={edge.node.frontmatter.cover.childImageSharp.gatsbyImageData}
+                      alt={edge.node.frontmatter.title}
+                    />
+                    <p>{edge.node.frontmatter.description}</p>
+                    <p>
+                    {edge.node.frontmatter.tags
+                    ? edge.node.frontmatter.tags.map((tag, i) => {
+                        return (
+                          <span key={i} className={`tagPill-${tag}`}>
+                            <Link to={`/tags/${tag.toLowerCase()}`}>
+                            {tag}
+                            </Link>
+                          </span>
+                        )
+                      })
+                    : null}
+                    <br></br>
+                    </p>
+                  </Link>
+                </div>
+              )
+            })}
+          </section>
+
+
+
+          <h1 className={projectsStyles.title}>Mini Projects</h1>
+          <hr />
+          <section className={projectsStyles.projectgrid}>
+            {data.miniprojects.edges.map((edge, index) => {
+              return (
+                <div key={index} className={projectsStyles.post}>
+                  <Link to={`/miniprojects/${edge.node.fields.slug}`}>
                     <h1 style={{ textAlign: "center" }}>{edge.node.frontmatter.title}</h1>
                     <GatsbyImage
                       image={edge.node.frontmatter.cover.childImageSharp.gatsbyImageData}

@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import Layout from "../components/layout"
 import { faTags } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import * as blogStyles from "../styles/pages/blog.module.scss"
 
 // Components
 import { Link, graphql } from "gatsby"
@@ -11,9 +10,6 @@ import { Link, graphql } from "gatsby"
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
 
   return (
     <Layout>
