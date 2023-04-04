@@ -5,24 +5,25 @@ import Head from "../components/head"
 import * as blogStyles from "../styles/pages/blog.module.scss"
 
 const ChallengesPage = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/challenges/"}}, sort: { fields: frontmatter___date, order: DESC }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date(formatString: "MMM, DD YYYY")
-            tags
-          }
-          fields {
-            slug
-          }
+  const data = useStaticQuery(graphql`{
+  allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/challenges/"}}
+    sort: {frontmatter: {date: DESC}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "MMM, DD YYYY")
+          tags
+        }
+        fields {
+          slug
         }
       }
     }
   }
-  `)
+}`)
 
   return (
     <Layout>

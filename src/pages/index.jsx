@@ -7,71 +7,63 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Typewriter from "typewriter-effect"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      articles: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/posts/" } }
-        sort: { fields: frontmatter___date, order: DESC }
-        limit: 3
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              date(formatString: "MMM, DD YYYY")
-              tags
-            }
-            fields {
-              slug
-            }
-          }
+  const data = useStaticQuery(graphql`{
+  articles: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/posts/"}}
+    sort: {frontmatter: {date: DESC}}
+    limit: 3
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "MMM, DD YYYY")
+          tags
+        }
+        fields {
+          slug
         }
       }
-
-      projects: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/projects/" } }
-        sort: { fields: frontmatter___date, order: DESC }
-        limit: 1
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              date(formatString: "MMM, DD YYYY")
-              tags
-              cover {
-                childImageSharp {
-                  gatsbyImageData(layout: FULL_WIDTH)
-                }
-              }
-              description
-            }
-
-            fields {
-              slug
-            }
-          }
-        }
-      }
-
-      books: allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(png)/" }
-          absolutePath: { regex: "/(images/books)|(books)/" }
-        }
-        sort: { fields: name, order: DESC }
-        limit: 1
-      ) {
-        edges {
-          node {
+    }
+  }
+  projects: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/projects/"}}
+    sort: {frontmatter: {date: DESC}}
+    limit: 1
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "MMM, DD YYYY")
+          tags
+          cover {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH)
             }
           }
+          description
+        }
+        fields {
+          slug
         }
       }
     }
-  `)
+  }
+  books: allFile(
+    filter: {extension: {regex: "/(jpg)|(png)/"}, absolutePath: {regex: "/(images/books)|(books)/"}}
+    sort: {name: DESC}
+    limit: 1
+  ) {
+    edges {
+      node {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
+    }
+  }
+}`)
 
   const phrases = phrasesFile
 

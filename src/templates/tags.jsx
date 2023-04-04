@@ -69,25 +69,22 @@ Tags.propTypes = {
 
 export default Tags
 
-export const pageQuery = graphql`
-  query($tag: String) {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/posts/" }, frontmatter: { tags: { in: [$tag] } } }
-
-    ) {
-      totalCount
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
+export const pageQuery = graphql`query ($tag: String) {
+  allMarkdownRemark(
+    limit: 2000
+    sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {regex: "/posts/"}, frontmatter: {tags: {in: [$tag]}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
         }
       }
     }
   }
-`
+}`

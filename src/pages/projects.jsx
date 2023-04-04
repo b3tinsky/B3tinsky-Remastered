@@ -8,62 +8,54 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import * as projectsStyles from "../styles/pages/projects.module.scss"
 
 const ProjectsPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      projects: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/src/projects/" } }
-        sort: { fields: frontmatter___date, order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              date(formatString: "MMM, DD YYYY")
-              tags
-              cover {
-                childImageSharp {
-                  gatsbyImageData(layout: FULL_WIDTH)
-                }
-              }
-              description
-            }
-
-            fields {
-              slug
+  const data = useStaticQuery(graphql`{
+  projects: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/src/projects/"}}
+    sort: {frontmatter: {date: DESC}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "MMM, DD YYYY")
+          tags
+          cover {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
+          description
+        }
+        fields {
+          slug
         }
       }
-      
-      miniprojects: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/src/miniprojects/" } }
-        sort: { fields: frontmatter___date, order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              date(formatString: "MMM, DD YYYY")
-              tags
-              cover {
-                childImageSharp {
-                  gatsbyImageData(layout: FULL_WIDTH)
-                }
-              }
-              description
-            }
-
-            fields {
-              slug
-            }
-          }
-        }
-      }
-
-
-
     }
-  `)
+  }
+  miniprojects: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/src/miniprojects/"}}
+    sort: {frontmatter: {date: DESC}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "MMM, DD YYYY")
+          tags
+          cover {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
+            }
+          }
+          description
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}`)
 
   return (
     <div>

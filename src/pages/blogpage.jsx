@@ -7,14 +7,13 @@ import { faMedium } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import * as blogStyles from "../styles/pages/blog.module.scss"
 
-export const data = graphql`
-query ($skip: Int, $limit: Int){
+export const data = graphql`query ($skip: Int, $limit: Int) {
   allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/posts/"}}, 
-    sort: { fields: frontmatter___date, order: DESC }
+    filter: {fileAbsolutePath: {regex: "/posts/"}}
+    sort: {frontmatter: {date: DESC}}
     limit: $limit
     skip: $skip
-    ) {
+  ) {
     edges {
       node {
         frontmatter {
@@ -28,8 +27,7 @@ query ($skip: Int, $limit: Int){
       }
     }
   }
-}
-`
+}`
 
 const BlogPage = (props) => {
   const { currentPage, numPages } = props.pageContext

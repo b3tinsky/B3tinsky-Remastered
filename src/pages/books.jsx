@@ -7,41 +7,36 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 
 const BooksPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allDirectory(
-        filter: { relativeDirectory: { regex: "/images/books/" } }
-        sort: { fields: base, order: DESC }
-      ) {
-        edges {
-          node {
-            relativePath
-            base
-            name
-          }
-        }
+  const data = useStaticQuery(graphql`{
+  allDirectory(
+    filter: {relativeDirectory: {regex: "/images/books/"}}
+    sort: {base: DESC}
+  ) {
+    edges {
+      node {
+        relativePath
+        base
+        name
       }
-      allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(png)/" }
-          relativeDirectory: { regex: "/(images/books)|(books)/" }
-        }
-        sort: { fields: base, order: DESC }
-      ) {
-        totalCount
-        edges {
-          node {
-            base
-            name
-            relativeDirectory
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
-            }
-          }
+    }
+  }
+  allFile(
+    filter: {extension: {regex: "/(jpg)|(png)/"}, relativeDirectory: {regex: "/(images/books)|(books)/"}}
+    sort: {base: DESC}
+  ) {
+    totalCount
+    edges {
+      node {
+        base
+        name
+        relativeDirectory
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
-  `)
+  }
+}`)
 
   let years = []
 

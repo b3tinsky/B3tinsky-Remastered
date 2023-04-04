@@ -64,21 +64,16 @@ TagsPage.propTypes = {
 
 export default TagsPage
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(
-      limit: 2000
-      filter: { fileAbsolutePath: { regex: "/posts/" } }
-      ) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
     }
   }
-`
+  allMarkdownRemark(limit: 2000, filter: {fileAbsolutePath: {regex: "/posts/"}}) {
+    group(field: {frontmatter: {tags: SELECT}}) {
+      fieldValue
+      totalCount
+    }
+  }
+}`

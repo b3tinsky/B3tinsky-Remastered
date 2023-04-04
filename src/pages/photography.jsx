@@ -6,28 +6,23 @@ import * as photographyStyles from "../styles/pages/photography.module.scss"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const PhotographyPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(png)/" }
-          relativeDirectory: { regex: "/(images/photography)|(photography)/" }
-        }
-        sort: { fields: name, order: ASC }
-      ) {
-        edges {
-          node {
-            base
-            name
-            relativeDirectory
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
-            }
-          }
+  const data = useStaticQuery(graphql`{
+  allFile(
+    filter: {extension: {regex: "/(jpg)|(png)/"}, relativeDirectory: {regex: "/(images/photography)|(photography)/"}}
+    sort: {name: ASC}
+  ) {
+    edges {
+      node {
+        base
+        name
+        relativeDirectory
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
-  `)
+  }
+}`)
   return (
     <div>
       <Head title="Photography" />

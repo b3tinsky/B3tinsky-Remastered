@@ -21,46 +21,40 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogTemplate = path.resolve("./src/templates/blog.js")
   const tagTemplate = path.resolve("src/templates/tags.jsx")
 
-  const res = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-            }
-          }
+  const res = await graphql(`{
+  allMarkdownRemark {
+    edges {
+      node {
+        fields {
+          slug
         }
-      }
-
-      articles: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/posts/" } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              tags
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-
-      tags: allMarkdownRemark(
-        limit: 2000
-        filter: { fileAbsolutePath: { regex: "/posts/" } }
-        ) {
-        group(field: frontmatter___tags) {
-          fieldValue
+        frontmatter {
+          tags
         }
       }
     }
-  `)
+  }
+  articles: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
+    edges {
+      node {
+        frontmatter {
+          tags
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+  tags: allMarkdownRemark(
+    limit: 2000
+    filter: {fileAbsolutePath: {regex: "/posts/"}}
+  ) {
+    group(field: {frontmatter: {tags: SELECT}}) {
+      fieldValue
+    }
+  }
+}`)
 
   if (res.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)

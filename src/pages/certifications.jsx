@@ -6,43 +6,36 @@ import * as certificationStyles from "../styles/pages/certifications.module.scss
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const CertificationsPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allDirectory(
-        filter: { relativeDirectory: { regex: "/images/certifications/" } }
-        sort: { fields: base, order: DESC }
-      ) {
-        edges {
-          node {
-            relativePath
-            base
-            name
-          }
-        }
+  const data = useStaticQuery(graphql`{
+  allDirectory(
+    filter: {relativeDirectory: {regex: "/images/certifications/"}}
+    sort: {base: DESC}
+  ) {
+    edges {
+      node {
+        relativePath
+        base
+        name
       }
-      allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(png)/" }
-          relativeDirectory: {
-            regex: "/(images/certifications)|(certifications)/"
-          }
-        }
-        sort: { fields: base, order: ASC }
-      ) {
-        totalCount
-        edges {
-          node {
-            base
-            name
-            relativeDirectory
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
-            }
-          }
+    }
+  }
+  allFile(
+    filter: {extension: {regex: "/(jpg)|(png)/"}, relativeDirectory: {regex: "/(images/certifications)|(certifications)/"}}
+    sort: {base: ASC}
+  ) {
+    totalCount
+    edges {
+      node {
+        base
+        name
+        relativeDirectory
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
-  `)
+  }
+}`)
 
 
   let years = []
@@ -81,7 +74,7 @@ const CertificationsPage = () => {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default CertificationsPage
